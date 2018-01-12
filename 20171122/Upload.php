@@ -1,6 +1,6 @@
 <?php
 if($_POST["height"]==NULL||$_POST["weight"]==NULL){
-    echo "please type in all information"."<br>";  
+    echo "全部填一填啦幹ㄋ"."<br>";  
 }
 else{
     echo "height: ".$_POST["height"]."<br>";
@@ -11,10 +11,10 @@ else{
 }
 $subfile=pathinfo($_FILES["file"]["name"], PATHINFO_EXTENSION);
 if(empty($_FILES["file"]["tmp_name"])){
-    echo "empty";
+    echo "沒照片喔這我哪知道你是誰";
 }
 else if($subfile!='bmp' && $subfile!='jpg' && $subfile!='jpeg' && $subfile!='gif' && $subfile!='tif' && $subfile!='tiff' && $subfile!='png' && $subfile!='wmf' ){
-    echo "wrong file type";
+    echo "上傳照片好嗎= =ㄋ";
 }
 else{
     $filename=$_FILES["file"]["name"];
